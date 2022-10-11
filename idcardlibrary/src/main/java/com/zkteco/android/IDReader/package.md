@@ -1,0 +1,1 @@
+# zkt jni java 类必须在该目录下 与so对应
