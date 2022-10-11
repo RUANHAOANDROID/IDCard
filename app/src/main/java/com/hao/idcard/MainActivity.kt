@@ -41,7 +41,12 @@ class MainActivity : AppCompatActivity() {
             idCardDevice?.start(readListener)
         }
         binding.btnStop.setOnClickListener {
-            idCardDevice?.stop()
+            try {
+                idCardDevice?.stop()
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+
         }
     }
 
