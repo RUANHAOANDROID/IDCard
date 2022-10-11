@@ -29,6 +29,7 @@ public class IDPhotoHelper {
     // 推荐使用ARGB_8888
     public static Bitmap Bgr2Bitmap(byte[] bgrbuf)
     {
+
         int width = WLTService.imgWidth;
         int height = WLTService.imgHeight;
         Bitmap bmp = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
@@ -46,4 +47,5 @@ public class IDPhotoHelper {
         }
         return bmp;
     }
+
 }
