@@ -5,7 +5,6 @@ import android.graphics.Bitmap
 import android.hardware.usb.UsbDevice
 import android.hardware.usb.UsbManager
 import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
 import com.hao.idcardlibrary.IDCardDevice
 import com.hao.idcardlibrary.IDCardInfo
 import com.zkteco.android.IDReader.IDPhotoHelper
@@ -85,7 +84,7 @@ class ID180(private val context: Context) : IDCardDevice {
     }
 
     private fun enumSensor(): Boolean {
-        val usbManager = context.getSystemService(AppCompatActivity.USB_SERVICE) as UsbManager
+        val usbManager = context.getSystemService(Context.USB_SERVICE) as UsbManager
         for (device in usbManager.deviceList.values) {
             if (device.vendorId == VID && device.productId == PID) {
                 return true
